@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{% include head.html %}
+
+<body>
+  {% include header.html %}
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+
+<!-- slideshow effect from https://themarklee.com/2013/10/16/simple-crossfading-slideshow-css/ -->
+<style type="text/css">
+  .css-slideshow{
+  position: relative;
+  max-width: 250px;
+  height: 200px;
+  margin: .5em auto .5em auto;
+}
+  .css-slideshow figure{
+  margin: 0;
+  max-width: 250px;
+  height: 200px;
+  background: #fff;
+  position: absolute;
+}
+  .css-slideshow figcaption{
+  position: absolute;
+  top: 0;
+  color: #fff;
+  background: rgba(0,0,0, .3);
+  font-size: .8em;
+  padding: 8px 12px;
+  opacity: 0;
+  transition: opacity .5s;
+}
+  .css-slideshow:hover figure figcaption{
+  transition: opacity .5s;
+  opacity: 1;
+}
+  .css-slideshow-attr{
+  max-width: 250px;
+  text-align: right;
+  font-size: .7em;
+  font-style: italic;
+  margin:0 auto;
+}
+.css-slideshow-attr a{
+  color: #666;
+}
+.css-slideshow figure{
+  opacity:0;
+}
+figure:nth-child(1) {
+  animation: xfade 20s 10s infinite;
+}
+figure:nth-child(2) {
+  animation: xfade 20s 0s infinite;
+}
+
+@keyframes xfade{
+  0%{
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+    </style>
+
+
+
+  <div class="container fifty" style="max-width: 950px">
+<!--    <div class="fixOverlayDiv"> -->
+    <h2 align = "center">UW Single-cell Atlases</h2>
+      <div class="css-slideshow" float:left> 
+        <figure>
+          <center><img src="images/tsne-1.png" style="width:250px"></center>
+        </figure> 
+        <figure>
+          <center><img src="images/fly_tsne_adjusted.png" style="width:250px"></center>
+        </figure>
+      </div>
+        <h4 align = "center">Welcome! Single-cell genomics can in principle reveal the molecular definition of every cell type in an entire animal. We have begun cataloging cell types in the worm, fly and other organisms using single-cell profiles of gene expression and chromatin accessibility. This site serves as a portal for our data and a repository for our analysis code and protocols. We also provide tutorials to assist you in downloading, analyzing and exploring these data.</h4>
+
+    <!-- </div> -->
+
+
+    <div class="col-md-12">
+
+    <table align="center">
+      <tr>
+        <th style="padding:0 15px 0 15px; text-align: center"><h3>sci-RNA-seq of the worm</h3></th>
+        <th style="padding:0 15px 0 15px; text-align: center"><h3>sci-ATAC-seq of the fly</h3></th>
+      </tr>
+      <tr>
+        <td style="text-align: center"><a href="https://cole-trapnell-lab.github.io/single-cell-worm/"><img src="images/worm-drawing-3-button.png" style="width:100px"></a></td>
+        <td style="text-align: center"><a href="https://shendurelab.github.io/Fly-sciATAC/"><img src="images/DrosophilaTimePointsButton.png" style="width:100px"></a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><p>42,035 L2 stage cells (RNA)</p></td>
+        <td style="text-align: center"><p>23,085 embryonic fly cells (ATAC)</p></td>
+      </tr>
+      <tr>
+        <td><div class='wrapper text-center'><a class="btn btn-default" href="https://cole-trapnell-lab.github.io/single-cell-worm/" role="button" style="background-color: #2C3E50; color: white">Go to worm &raquo;</a></div></td>
+        <td><div class='wrapper text-center'><a class="btn btn-default" href="https://shendurelab.github.io/Fly-sciATAC/" role="button" style="background-color: #2C3E50; color: white">Go to fly &raquo;</a></div></td>
+      </tr>
+    </table>
+    <div class="hugespacer"></div>
+    <footer>
+      <small>Shendure, Trapnell, Waterston, and Furlong labs &copy; 2018.</small>
+      <small>Worm image derived from original &copy; 2017 Mark Leaver. Used with permission.</small>
+    </footer>
+  </div>
+
+
+
+
+</div> <!-- /container -->
+
+
+</body>
+
+</html>
