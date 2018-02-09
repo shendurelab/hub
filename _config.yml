@@ -16,7 +16,7 @@
 title: UW Atlases
 email: shendure@uw.edu
 description: > # this means to ignore newlines until "baseurl:"
-  Landing page for single-cell organismal atlases produced at the University of Washington.
+  Landing page for single-cell atlases produced at the University of Washington.
 #baseurl: "/single-cell-fly"
 #baseurl: ""
 #url: "http://atlas.gs.washington.edu" # the base hostname & protocol for your site, e.g. http://example.com
